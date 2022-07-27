@@ -55,14 +55,14 @@ FExpScrollH(FExpID := 0, Direction := "", ScrollUnit := "Ln", Rep := 1) {
     FExpID := WinActive("ahk_exe explorer.exe")
     ; comment out one of the two below
     Direction := "L", ScrollUnit := "Ln", Rep := 6	; scroll by line, slow, but can adjust the number of lines in the Rep variable to make it faster
-    Direction := "L", ScrollUnit := "Pg", Rep := 1	; scroll by page, fast, but might be too fast
+    ; Direction := "L", ScrollUnit := "Pg", Rep := 1	; scroll by page, fast, but might be too fast
     FExpScrollH(FExpID, Direction, ScrollUnit, Rep)
   }
   ~Shift & WheelDown::{	; Scroll right in File Explorer
     FExpID := WinActive("ahk_exe explorer.exe")
     ; comment out one of the two below
     Direction := "R", ScrollUnit := "Ln", Rep := 6
-    Direction := "R", ScrollUnit := "Pg", Rep := 1
+    ; Direction := "R", ScrollUnit := "Pg", Rep := 1
     FExpScrollH(FExpID, Direction, ScrollUnit, Rep)
   }
 #HotIf
